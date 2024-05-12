@@ -1,0 +1,38 @@
+<!-- home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Question and Answer AI</title>
+</head>
+<body>
+    <h1>Question and Answer AI</h1>
+    
+    <form id="question-form">
+        <label for="question-input"></label><input type="text" id="question-input" placeholder="Enter your question">
+        <button type="submit">Ask</button>
+    </form>
+
+    <div id="answer-container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#question-form').submit(function(event) {
+                event.preventDefault();
+                
+                var question = $('#question-input').val();
+                
+                $.ajax({
+                    url: '/get-answer/',
+                    method: 'POST',
+                    data: { 'question': question },
+                    success: function(response) {
+                        $('#answer-container').text(response.answer);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

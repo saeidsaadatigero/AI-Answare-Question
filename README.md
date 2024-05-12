@@ -10,3 +10,4 @@ Unleash the Power of Human-AI Collaboration: A Django-Powered Web App Harnessing
 ایجاد دو ویو در Django:
 نمایش صفحه اصلی برنامه
 دریافت پرسش از کاربر، پیش‌پردازش آن و پیش‌بینی پاسخ توسط مدل آموزش‌دیده و ارائه پاسخ به کاربر به صورت JSON
+![Uploading Screenshot from 2024-05-13 01-55-10.png…]()
